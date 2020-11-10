@@ -1,0 +1,16 @@
+.listItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: aquamarine;
+}
+.bot {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
