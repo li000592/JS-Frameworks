@@ -1,16 +1,56 @@
 .listItem {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: aquamarine;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 8px 16px 8px 16px;
+   border-bottom: black 0.3px solid;
 }
 .bot {
-  display: flex;
-  flex-direction: row;
+   display: flex;
+   flex-direction: row;
+   width: auto;
+}
+.bot p {
+   /* margin-right: 5; */
+   color: rgb(101, 94, 94);
+   font-weight: 400;
+   font-size: 13px;
+}
+.left {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
 
 .buttons {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+}
+
+.delete-btn {
+   background-color: #e3166e !important;
+}
+.delete-btn:active {
+   transform: translateY(1px);
+   filter: saturate(150%);
+}
+
+/* inverse colors on hover */
+.delete-btn:hover {
+   color: #ec0183;
+   border-color: currentColor;
+   background-color: white;
+}
+
+/* Firefox: remove the inner border shown on focus */
+.delete-btn::-moz-focus-inner {
+   border: none;
+}
+
+/* make sure we have a visible focus ring */
+.delete-btn:focus {
+   outline: none;
+   box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5),
+      0 0 0 1.5px rgba(255, 105, 180, 0.5);
 }

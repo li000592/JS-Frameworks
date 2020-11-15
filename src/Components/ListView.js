@@ -1,11 +1,20 @@
 import React from 'react'
+import ListItem from './ListItem'
 
-function ListView() {
-    return (
-        <div>
-            
-        </div>
-    )
+function ListView(props) {
+   console.log('123', props)
+   if (!props.frameworks || props.frameworks.length < 1)
+      return <div>Nothing</div>
+   return props.frameworks.map(farmework => (
+      <ListItem
+         id={farmework.id}
+         key={farmework.id}
+         name={farmework.name}
+         url={farmework.url}
+         lead={farmework.lead}
+         setFrameworks={props.setFrameworks}
+      />
+   ))
 }
 
 export default ListView

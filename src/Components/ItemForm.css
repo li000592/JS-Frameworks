@@ -1,0 +1,22 @@
+.newItemContent {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   align-items: flex-end;
+   width: 95%;
+}
+.left {
+   width: 70%;
+   display: flex;
+   justify-content: flex-end;
+}
+.left p {
+   width: 120px;
+}
+.newItemContent input {
+   /* width: auto; */
+}
+.inputs {
+   display: flex;
+   flex-direction: row;
+}
