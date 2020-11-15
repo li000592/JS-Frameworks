@@ -19,30 +19,7 @@ export default function ItemForm(props) {
       console.log(newForm)
       props.setFrameworks(frameworks => frameworks.concat(newForm))
    }
-   // function editForm() {
-   //    const name = document.querySelector(`#${props.pickedId} .form-name`).value
-   //    const url = document.querySelector(`#${props.pickedId} .form-url`).value
-   //    const lead = document.querySelector(`#${props.pickedId} .form-lead`).value
-   //    console.log(name)
-   //    console.log(props.pickedId)
-   //    props.setFrameworks(frameworks =>
-   //       frameworks.filter(obj => obj.id !== props.pickedId),
-   //    )
-   //    //const index = frameworks.findIndex(obj => obj.id == props.pickedId)
-   //    const newForm = {
-   //       id: props.pickedId,
-   //       name: name,
-   //       url: url,
-   //       lead: lead,
-   //    }
-   //    // frameworks[index].name = name
-   //    // frameworks[index].url = url
-   //    // frameworks[index].lead = lead
-   //    document
-   //       .querySelectorAll('.editFrom')
-   //       .forEach(element => element.classList.add('hidden'))
-   //    props.setFrameworks(frameworks => frameworks.concat(newForm))
-   // }
+
    function editForm() {
       const name = document.querySelector(`#${props.pickedId} .form-name`).value
       const url = document.querySelector(`#${props.pickedId} .form-url`).value
