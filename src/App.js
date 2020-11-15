@@ -5,11 +5,22 @@ import NewItemView from './Components/NewItemView'
 import ListView from './Components/ListView'
 import useLocalStorageState from './useLocalStorageState'
 import './App.css'
+import cuid from 'cuid'
 
 const initialData = [
-   {id: '1', name: 'Vue', url: 'https://vuejs.org/', lead: 'Evan You'},
-   {id: '2', name: 'react', url: 'https://www.react.com', lead: 'Facebook'},
-   {id: '3', name: 'Angular', url: 'https://Angular.com', lead: 'Google'},
+   {id: cuid(), name: 'Vue', url: 'https://vuejs.org/', lead: 'Evan You'},
+   {
+      id: cuid(),
+      name: 'react',
+      url: 'https://www.react.com',
+      lead: 'Facebook',
+   },
+   {
+      id: cuid(),
+      name: 'Angular',
+      url: 'https://Angular.com',
+      lead: 'Google',
+   },
 ]
 
 function App() {
@@ -17,6 +28,9 @@ function App() {
       'frameworks',
       initialData,
    )
+   React.useEffect(() => {
+      console.log('upgrade list')
+   }, [setFrameworks])
 
    return (
       <div className='App'>
