@@ -2,11 +2,11 @@ import React from 'react'
 import './NewItemView.css'
 import ItemFrom from './ItemForm'
 
-function NewItemView() {
+function NewItemView(props) {
    return (
       <div className='newItemView'>
          <h3>Add a new framework</h3>
-         <ItemFrom />
+         <ItemFrom setFrameworks={props.setFrameworks} />
       </div>
    )
 }

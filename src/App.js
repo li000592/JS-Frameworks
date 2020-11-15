@@ -30,8 +30,8 @@ function App() {
                         setFrameworks={setFrameworks}
                      />
                   </Route>
-                  <Route exact path='/newItem' setFrameworks={setFrameworks}>
-                     <NewItemView />
+                  <Route exact path='/newItem'>
+                     <NewItemView setFrameworks={setFrameworks} />
                   </Route>
                </Switch>
             </main>
