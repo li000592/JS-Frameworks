@@ -14,7 +14,7 @@ function AppHeader() {
          </Link>
 
          <Link to='/newItem'>
-            <h1>+</h1>
+            <h1 className='add-btn'>+</h1>
          </Link>
       </header>
    )
