@@ -60,3 +60,6 @@
 .hidden {
    display: none;
 }
+.editFrom h3 {
+   text-align: center;
+}

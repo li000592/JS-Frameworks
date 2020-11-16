@@ -1,22 +1,79 @@
 .newItemContent {
    display: flex;
    flex-direction: row;
-   justify-content: flex-end;
-   align-items: flex-end;
-   width: 95%;
+   justify-content: space-between;
+   /* align-items: flex-end; */
+   padding: 8px 16px 8px 16px;
+   border-bottom: black 0.3px solid;
+   padding-bottom: 20px;
+   padding-top: 20px;
 }
 .left {
-   width: 70%;
-   display: flex;
-   justify-content: flex-end;
+   width: 100%;
+   /* width: 70%; */
+   /* display: flex;
+   justify-content: flex-end; */
 }
 .left p {
    width: 120px;
 }
 .newItemContent input {
-   /* width: auto; */
+   width: 60%;
 }
 .inputs {
    display: flex;
    flex-direction: row;
+   margin-bottom: 15px;
+}
+input {
+   width: 60%;
+}
+.newItemContent button:hover {
+   background-color: rgb(247, 223, 30);
+   border: black 1px solid;
+   color: white !important;
+}
+@media all and (max-width: 601px) {
+   .newItemContent {
+      flex-direction: column;
+      padding: 10px;
+      width: 100%;
+   }
+   input {
+      width: 100%;
+   }
+   .newItemContent p {
+      width: 150px;
+      margin-bottom: 10px;
+   }
+   .newItemContent .buttons {
+      flex-direction: row;
+   }
+   .newItemContent button {
+      margin: 10px;
+      width: 100px;
+   }
+   .newItemContent .inputs {
+      flex-direction: column;
+      margin-bottom: 10px;
+   }
+   .newItemContent input {
+      width: 90%;
+      display: flex;
+      align-items: center;
+   }
+}
+@media all and (min-width: 1024px) {
+   .newItemContent {
+      /* justify-content: center;
+      align-self: center;
+      align-items: center;
+      align-content: center; */
+   }
+   .newItemContent p {
+      width: 200px;
+   }
+   .left {
+      margin-right: 10px;
+   }
 }
