@@ -4,7 +4,6 @@ import {Link, useLocation} from 'react-router-dom'
 import './ItemForm.css'
 export default function ItemForm(props) {
    let path = useLocation().pathname
-   console.log(props)
    function clickSave() {
       const name = document.querySelector('.form-name').value
       const url = document.querySelector('.form-url').value
@@ -16,7 +15,6 @@ export default function ItemForm(props) {
          url: url,
          lead: lead,
       }
-      console.log(newForm)
       props.setFrameworks(frameworks => frameworks.concat(newForm))
    }
 
@@ -51,17 +49,21 @@ export default function ItemForm(props) {
             </div>
          </div>
          <div className='buttons'>
-            <Link to='/' onClick={path == '/newItem' ? clickSave : editForm}>
-               SAVE
-            </Link>
-            <Link
-               to='/'
-               onClick={document
-                  .querySelectorAll('.editFrom')
-                  .forEach(element => element.classList.add('hidden'))}
-            >
-               CANCEL
-            </Link>
+            <button>
+               <Link to='/' onClick={path == '/newItem' ? clickSave : editForm}>
+                  SAVE
+               </Link>
+            </button>
+            <button>
+               <Link
+                  to='/'
+                  onClick={document
+                     .querySelectorAll('.editFrom')
+                     .forEach(element => element.classList.add('hidden'))}
+               >
+                  CANCEL
+               </Link>
+            </button>
          </div>
       </div>
    )

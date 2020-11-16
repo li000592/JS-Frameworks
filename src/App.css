@@ -1,9 +1,6 @@
 a {
-   color: rgb(37, 152, 194);
    text-decoration: none;
-   /* border: black 1px solid; */
    text-align: center;
-   /* background-color: chartreuse; */
 }
 
 p {
@@ -30,8 +27,11 @@ button {
    padding: 0.5em 1em;
 
    /* make sure colors have enough contrast! */
-   color: #ffffff;
-   background-color: #9555af;
+   color: black;
+   background-color: none;
+   color: black;
+   border-color: currentColor;
+   background-color: white;
 }
 button:active {
    transform: translateY(1px);
@@ -40,9 +40,8 @@ button:active {
 
 /* inverse colors on hover */
 button:hover {
-   color: #9050aa;
-   border-color: currentColor;
-   background-color: white;
+   background-color: black;
+   color: white;
 }
 
 /* Firefox: remove the inner border shown on focus */

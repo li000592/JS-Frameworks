@@ -26,10 +26,14 @@
    display: flex;
    flex-direction: column;
    align-self: center;
+   background-color: none;
+   color: black;
 }
 
 .delete-btn {
-   background-color: #e3166e !important;
+   color: #ec0183;
+   border-color: currentColor;
+   background-color: white;
 }
 .delete-btn:active {
    transform: translateY(1px);
@@ -38,9 +42,8 @@
 
 /* inverse colors on hover */
 .delete-btn:hover {
-   color: #ec0183;
-   border-color: currentColor;
-   background-color: white;
+   background-color: #fd3434;
+   color: white;
 }
 
 /* Firefox: remove the inner border shown on focus */

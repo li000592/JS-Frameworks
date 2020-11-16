@@ -3,24 +3,18 @@ import ItemForm from './ItemForm'
 import './ListItem.css'
 
 function ListItem(props) {
-   console.log(props)
    const clickDelete = ev => {
       const id = ev.currentTarget.getAttribute('a-key')
       props.setFrameworks(frameworks => frameworks.filter(obj => obj.id !== id))
    }
    const clickEdit = ev => {
-      //document.querySelectorAll('.editFrom').classList.add('hidden')
       document
          .querySelectorAll('.editFrom')
          .forEach(element => element.classList.add('hidden'))
-      console.log(document.querySelectorAll('.editFrom'))
       const id = ev.currentTarget.getAttribute('a-key')
       const showForm = document.getElementById(id)
-      console.log(showForm)
+
       showForm.classList.remove('hidden')
-      console.log(showForm)
-      //props.setFrameworks(frameworks =>  )
-      console.log(id)
    }
 
    return (
@@ -38,7 +32,7 @@ function ListItem(props) {
                   EDIT
                </button>
                <button
-                  className='delelte-btn'
+                  className='delete-btn'
                   onClick={clickDelete}
                   a-key={props.id}
                >

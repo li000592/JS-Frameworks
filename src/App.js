@@ -28,9 +28,6 @@ function App() {
       'frameworks',
       initialData,
    )
-   React.useEffect(() => {
-      console.log('upgrade list')
-   }, [setFrameworks])
 
    return (
       <div className='App'>
@@ -55,11 +52,3 @@ function App() {
 }
 
 export default App
-// function changeFrameworks(action, id, newForm) {
-//    if (action == 'delete') {
-//       setFrameworks(frameworks.filter(obj => obj.id !== id))
-//    } else if (action == 'edit') {
-//       const index = frameworks.findIndex(obj => obj.id == id)
-//       setFrameworks((frameworks[index] = newForm))
-//    }
-// }
